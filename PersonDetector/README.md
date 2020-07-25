@@ -52,6 +52,8 @@ Create virtual environment and use the requirements.txt for the correct versions
 pip install -r requirements.txt
 ```
 
+The validation XML have been acquired from [OPEN CV GITHUB](https://github.com/opencv/opencv/tree/master/data/haarcascades).
+
 ## Usage:
 
 There is plenty of arguments variations that can modificate the functioning of the video detector:
