@@ -8,7 +8,7 @@ As part of the AntiTrash project, a system will be developed to automatically de
 
 In this repository we are facing three approaches that will improve the quality of the AntiTrash Project:
 
-### [Vehicle Occupancies](/PersonDetection)
+### [Vehicle Occupancies](/PersonDetector)
 
 For the correct performance of the cleanliness level classifying algorithm, an image pre-processing is necessary to guarantee that, in said photograph, no person can neither be recognized nor appear in the vehicle. In order to confirm such assumption, it is necessary to apply a “person” detector using AI that allows the classification of the image as "empty" or "occupied" vehicles.
 
