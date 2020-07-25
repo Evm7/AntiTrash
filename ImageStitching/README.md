@@ -24,17 +24,17 @@ There are two possibilities when capturing images in the public vehicles:
 Such algorithm will be taking as input a set of images such as the ones below captured from the linear camera:
 
 ![Original Linear Camera Images for the public vehicle](/Images/original.png)
-Format: ![Alt Text](url)
+Format: ![Alt Text](/Images/original.png)
 
 With this images, an image stitching algorithm will be executed in order to unify all images searching for resemblances between each of them.
 
 ![Stitched Images: comparision between cropped or not](/Images/imageStitching.png)
-Format: ![Alt Text](url)
+Format: ![Alt Text](/Images/imageStitching.png)
 
 Then, by applying a thresholding technique and a mask, we will detect the squares and the objects located in the images.
 
 ![Final Detections of the Objects in the images](/Images/squaresDetected.png)
-Format: ![Alt Text](url)
+Format: ![Alt Text](/Images/squaresDetected.png)
 
 
 ## Pre-requisites for its use in Raspberry Pi 3B
