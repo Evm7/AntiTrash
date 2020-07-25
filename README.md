@@ -56,7 +56,7 @@ pip install -r requirements.txt
 
 There is plenty of arguments variations that can modificate the functioning of the video detector:
 ```
-python antitrash.py -i <path_input> [-model <model_name> [--resultsFile <name_txt_file>] [--visualize BOOL] [--threshold <ACCURACY>] [--directory BOOL] [--validate BOOL] [--faceDetector >path_to_XML>]
+python PersonDetector.py -i <path_input> [-model <model_name> [--resultsFile <name_txt_file>] [--visualize BOOL] [--threshold <ACCURACY>] [--directory BOOL] [--validate BOOL] [--faceDetector >path_to_XML>]
 ```
 
 When executing the script for the first time, a Results.json file is created where there will be automatically written with details the total results of all detections made in the image. Details of each argument:
@@ -73,6 +73,6 @@ When executing the script for the first time, a Results.json file is created whe
 
 Example of execution from our servers (it is important to load CUDA/10.0 and CUDNN/7.4 and use the memory consumptions state below):
 ```
-  python antitrash.py -i image.jpg --validate True
+  python PersonDetector.py -i image.jpg --validate True
 ```  
   
