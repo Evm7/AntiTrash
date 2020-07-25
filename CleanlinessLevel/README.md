@@ -3,12 +3,12 @@ Repository to hold the AntiTrash Project
 
 ## Work Done ⏳ :
 
-- [] Search for a good already annotated database.
-- [] Search for a good object classifier pre trained algorithm
-- [] Try the CNN in some images.
-- [] Create an algorithm which crops the objects manually (as should do the background subtraction method) and send this image to be detected by the CNN.
-- [] Evaluate the process in the database from TRAM and VEHICLE and obtain some images.
-- [] If the there are a lot of objects that our database can not classify, search for a new database, and train the CNN.
+- [ ] Search for a good already annotated database.
+- [ ] Search for a good object classifier pre trained algorithm
+- [ ] Try the CNN in some images.
+- [ ] Create an algorithm which crops the objects manually (as should do the background subtraction method) and send this image to be detected by the CNN.
+- [ ] Evaluate the process in the database from TRAM and VEHICLE and obtain some images.
+- [ ] If the there are a lot of objects that our database can not classify, search for a new database, and train the CNN.
 
 
 
