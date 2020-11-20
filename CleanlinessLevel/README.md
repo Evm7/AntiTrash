@@ -11,6 +11,7 @@ As part of the [AntiTrash project](http://www.carnetbarcelona.com/index.php/2020
 Currently, the AntiTrash project already has a system for detecting the level of dirt in the vehicle, classifying the image as "garbage" or "valuable object" based on the image taken by the camera. In addition, through "Back Substraction" techniques it is possible to obtain the precise location of these anomalous objects inside the vehicle.
 
 ![Annnotation](/CleanlinessLevel/images/annotation.png)
+<a href="Annnotation"><img src="/CleanlinessLevel/images/annotation.png" align="center" height="200" width="200" ></a>
 
 
 The project, even so, aims to go further and identify and classify these objects according to their typology (mobiles, wallets, cans, bottles, ...). Consequently, it would be possible to obtain an indicator automatically that extracts a global cleaning level based about the vehicle at that precise moment. This is where the Cleaning Level Classification Algorithm comes in.
