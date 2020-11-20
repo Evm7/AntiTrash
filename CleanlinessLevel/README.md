@@ -10,7 +10,7 @@ As part of the [AntiTrash project](http://www.carnetbarcelona.com/index.php/2020
 
 Currently, the AntiTrash project already has a system for detecting the level of dirt in the vehicle, classifying the image as "garbage" or "valuable object" based on the image taken by the camera. In addition, through "Back Substraction" techniques it is possible to obtain the precise location of these anomalous objects inside the vehicle.
 
-![alt Annnotatiobn](/images/anntotation.png)
+![Annnotatiobn](/CleanlinessLevel/images/anntotation.png)
 
 
 The project, even so, aims to go further and identify and classify these objects according to their typology (mobiles, wallets, cans, bottles, ...). Consequently, it would be possible to obtain an indicator automatically that extracts a global cleaning level based about the vehicle at that precise moment. This is where the Cleaning Level Classification Algorithm comes in.
@@ -20,11 +20,11 @@ The project, even so, aims to go further and identify and classify these objects
 ## Database
 Our database consists of a total of 341 images of valuables and 311 of trash of the entire interior of the vehicle. In each of these images a set of objects can appear included within the super categories of "garbage", "valuable" or “empty”. Through the clipping and annotation algorithm, a total of 595 objects have been extracted, which have been classified into a total of 11 categories:
 
-![alt Database](/images/database.png)
+![Database](/CleanlinessLevel/images/database.png)
 
 For each category we have created a 60-20-20 split in order to create the training, validation and testing set.
 
-![alt Split Database](/images/split.jpg)
+![Split Database](/CleanlinessLevel/images/split.jpg)
 
 
 ## Methodology
@@ -35,22 +35,22 @@ As the database of the annotated obejcts with each typology was only of 595 obje
   4. Start training, but only train the FC layer heads. This training of the network uses a very small learning rate so the new set of fully connected layers can learn patterns from the previously learned CONV layers earlier in the network — this process is called allowing the FC layers to “warm up”.
   5. Unfreeze all of the CONV layers in the network and perform a second pass of training to readapt the whole model to our data set.
 
-![alt Warm-Up](/images/vgg16.jpg)
+![Warm-Up](/CleanlinessLevel/images/vgg16.jpg)
 
 
 ## Results
 As explained in the methodology, various scenarios were tested to gradually improve our model and adapt it based on the results. Initially, the pre-trained network in another target domain did not correctly classify any of the test objects. Fine Tuning was, in this case, the technique that allowed us to substantially improve our augmentation, although clear overfitting results were achieved.
 Finally, through the use of online augmentation and dropout we managed to achieve a 92% accuracy in the test set, very high due to the low number of images we had. In the figure below we can see how the warm-up technique prepared the head layers for the target domain, and finnally fine tuning all the inner layers get the network to learn about our targets:
 
-![alt PlotLosses](/images/losses.jpg)
+![PlotLosses](/CleanlinessLevel/images/losses.jpg)
 
 It should be said that our model was perfectly adapted to those categories of objects with a greater number of images, achieving 100% precision in some of the cases. At the end of the training, the evaluation of the network in our validation split showed very good results:
 
-![alt ValidationResults](/images/ValidationResults.jpg)
+![ValidationResults](/CleanlinessLevel/images/ValidationResults.jpg)
 
 However, in order to prove that the results are reliable, there is a need of testing our model to new data which has never seen. Below is the confusion matrix of our final model tested in our dataset:
 
-![alt TestingResults](/images/TestingResults.jpg)
+![TestingResults](/CleanlinessLevel/images/TestingResults.jpg)
 
 ## Conclusion
 We have been able to contextualize our problem, inform ourselves about the different avant-garde techniques currently used to overcome it, and we have put them all to the test in our own database. With all this, the results obtained have been excellent, showing a percentage higher than 90% in all metrics.
