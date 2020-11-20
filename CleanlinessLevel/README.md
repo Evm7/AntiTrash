@@ -38,8 +38,9 @@ As the database of the annotated obejcts with each typology was only of 595 obje
   3. Freeze earlier CONV layers earlier in the network (ensuring that any previous robust features learned by the CNN are not destroyed).
   4. Start training, but only train the FC layer heads. This training of the network uses a very small learning rate so the new set of fully connected layers can learn patterns from the previously learned CONV layers earlier in the network — this process is called allowing the FC layers to “warm up”.
   5. Unfreeze all of the CONV layers in the network and perform a second pass of training to readapt the whole model to our data set.
-
+<p align="center">
 ![Vgg16](/CleanlinessLevel/images/vgg16.jpg)
+</p>
 
 ## Results
 As explained in the methodology, various scenarios were tested to gradually improve our model and adapt it based on the results. Initially, the pre-trained network in another target domain did not correctly classify any of the test objects. Fine Tuning was, in this case, the technique that allowed us to substantially improve our augmentation, although clear overfitting results were achieved.
