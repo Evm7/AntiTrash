@@ -40,7 +40,7 @@ As the database of the annotated obejcts with each typology was only of 595 obje
   5. Unfreeze all of the CONV layers in the network and perform a second pass of training to readapt the whole model to our data set.
 
 <p align="center">
-  <img width="623" height="533 src="/CleanlinessLevel/images/vgg16.jpg">
+  <img width="533" height="623 src="/CleanlinessLevel/images/vgg16.jpg">
 </p>
 
 ## Results
@@ -53,14 +53,14 @@ Finally, through the use of online augmentation and dropout we managed to achiev
 It should be said that our model was perfectly adapted to those categories of objects with a greater number of images, achieving 100% precision in some of the cases. At the end of the training, the evaluation of the network in our validation split showed very good results:
 
 <p align="center">
-  <img width="800" height="660" src="/CleanlinessLevel/images/ValidationResults.jpg">
+  <img width="600" height="437" src="/CleanlinessLevel/images/ValidationResults.jpg">
 </p>
 
 However, in order to prove that the results are reliable, there is a need of testing our model to new data which has never seen. Below is the confusion matrix of our final model tested in our dataset:
 
 
 <p align="center">
-  <img width="800" height="660" src="/CleanlinessLevel/images/TestingResults.jpg">
+  <img width="600" height="437" src="/CleanlinessLevel/images/TestingResults.jpg">
 </p>
 
 ## Conclusion
