@@ -28,7 +28,7 @@ For each category we have created a 60-20-20 split in order to create the traini
 
 
 <p align="center">
-  <img width="856" height="159" src="/CleanlinessLevel/images/split.jpg">
+  <img width="500" height="93" src="/CleanlinessLevel/images/split.jpg">
 </p>
 
 ## Methodology
