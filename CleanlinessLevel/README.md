@@ -39,7 +39,7 @@ As the database of the annotated obejcts with each typology was only of 595 obje
   4. Start training, but only train the FC layer heads. This training of the network uses a very small learning rate so the new set of fully connected layers can learn patterns from the previously learned CONV layers earlier in the network — this process is called allowing the FC layers to “warm up”.
   5. Unfreeze all of the CONV layers in the network and perform a second pass of training to readapt the whole model to our data set.
 <p align="center">
-![Vgg16](/CleanlinessLevel/images/vgg16.jpg)
+    <img  src="/CleanlinessLevel/images/vgg16.jpg">
 </p>
 
 ## Results
