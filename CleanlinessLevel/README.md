@@ -11,7 +11,7 @@ As part of the [AntiTrash project](http://www.carnetbarcelona.com/index.php/2020
 Currently, the AntiTrash project already has a system for detecting the level of dirt in the vehicle, classifying the image as "garbage" or "valuable object" based on the image taken by the camera. In addition, through "Back Substraction" techniques it is possible to obtain the precise location of these anomalous objects inside the vehicle.
 
 <p align="center">
-  <img width="700" height="470" src="/CleanlinessLevel/images/annotation.png">
+  <img width="600" height="400" src="/CleanlinessLevel/images/annotation.png">
 </p>
 
 The project, even so, aims to go further and identify and classify these objects according to their typology (mobiles, wallets, cans, bottles, ...). Consequently, it would be possible to obtain an indicator automatically that extracts a global cleaning level based about the vehicle at that precise moment. This is where the Cleaning Level Classification Algorithm comes in.
@@ -22,13 +22,13 @@ The project, even so, aims to go further and identify and classify these objects
 Our database consists of a total of 341 images of valuables and 311 of trash of the entire interior of the vehicle. In each of these images a set of objects can appear included within the super categories of "garbage", "valuable" or “empty”. Through the clipping and annotation algorithm, a total of 595 objects have been extracted, which have been classified into a total of 11 categories:
 
 <p align="center">
-  <img width="1000" height="730" src="/CleanlinessLevel/images/database.png">
+  <img width="600" height="437" src="/CleanlinessLevel/images/database.png">
 </p>
 For each category we have created a 60-20-20 split in order to create the training, validation and testing set.
 
 
 <p align="center">
-  <img width="460" height="300" src="/CleanlinessLevel/images/split.jpg">
+  <img width="856" height="159" src="/CleanlinessLevel/images/split.jpg">
 </p>
 
 ## Methodology
@@ -40,7 +40,7 @@ As the database of the annotated obejcts with each typology was only of 595 obje
   5. Unfreeze all of the CONV layers in the network and perform a second pass of training to readapt the whole model to our data set.
 
 <p align="center">
-  <img width="460" height="300" src="/CleanlinessLevel/images/vgg16.jpg">
+  <img width="623" height="533 src="/CleanlinessLevel/images/vgg16.jpg">
 </p>
 
 ## Results
@@ -48,19 +48,19 @@ As explained in the methodology, various scenarios were tested to gradually impr
 Finally, through the use of online augmentation and dropout we managed to achieve a 92% accuracy in the test set, very high due to the low number of images we had. In the figure below we can see how the warm-up technique prepared the head layers for the target domain, and finnally fine tuning all the inner layers get the network to learn about our targets:
 
 <p align="center">
-  <img width="460" height="300" src="/CleanlinessLevel/images/losses.jpg">
+  <img width="984" height="447" src="/CleanlinessLevel/images/losses.jpg">
 </p>
 It should be said that our model was perfectly adapted to those categories of objects with a greater number of images, achieving 100% precision in some of the cases. At the end of the training, the evaluation of the network in our validation split showed very good results:
 
 <p align="center">
-  <img width="460" height="300" src="/CleanlinessLevel/images/ValidationResults.jpg">
+  <img width="800" height="660" src="/CleanlinessLevel/images/ValidationResults.jpg">
 </p>
 
 However, in order to prove that the results are reliable, there is a need of testing our model to new data which has never seen. Below is the confusion matrix of our final model tested in our dataset:
 
 
 <p align="center">
-  <img width="460" height="300" src="/CleanlinessLevel/images/TestingResults.jpg">
+  <img width="800" height="660" src="/CleanlinessLevel/images/TestingResults.jpg">
 </p>
 
 ## Conclusion
